@@ -23,3 +23,16 @@ Let's get started with some coding around Pandas and whatever we need to process
 > jupyter kernelspec list
 > jupyter kernelspec uninstall pandasprom
 ```
+
+# Issues / Knowledge Base
+1. Unicode decode error
+    ```
+    > UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 15: invalid continuation byte
+    
+    df = pd.read_csv('../data/bikes_montreal_2012.csv', **encoding='ISO-8859-1'**)
+    ```
+
+
+# Useful links
+- **Github repository**: [pandas-cookbook](https://github.com/jvns/pandas-cookbook/blob/master/data/bikes.csv)
+- **Kaggle**: Excellent Pandas Notebooks from book Pandas Cookbook: [discussion](https://www.kaggle.com/discussions/getting-started/120943)
