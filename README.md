@@ -25,13 +25,19 @@ Let's get started with some coding around Pandas and whatever we need to process
 ```
 
 # Issues / Knowledge Base
-1. Unicode decode error
+1. Unicode decode error: `encoding`
     ```
     > UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 15: invalid continuation byte
     
     df = pd.read_csv('../data/bikes_montreal_2012.csv', **encoding='ISO-8859-1'**)
     ```
 
+2. Mixed types: `dtype`
+    ```
+    > DtypeWarning: Columns (8) have mixed types. Specify dtype option on import or set low_memory=False.
+
+    df_complaints = pd.read_csv('../data/311-service-requests.csv', dtype='unicode')
+    ```
 
 # Useful links
 - **Github repository**: [pandas-cookbook](https://github.com/jvns/pandas-cookbook/blob/master/data/bikes.csv)
